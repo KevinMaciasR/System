@@ -40,8 +40,8 @@ void loop() {
   rawdata = SD.open("rawdata.txt", FILE_WRITE);
 
   int irValue = analogRead(irSensorPin);
-  int distance = irToDistance(irValue);  // Convertir la lectura del sensor a distancia en 20 cm
-  if (distance < 20) {
+  int distance = irToDistance(irValue);  // Convertir la lectura del sensor a distancia en 10 cm
+  if (distance < 10) {
     digitalWrite(buzzerPin, HIGH);
     lcd.clear();
     lcd.setCursor(0, 0);
